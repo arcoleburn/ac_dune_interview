@@ -21,10 +21,10 @@ const getCryptoData = async (
 };
 
 type HomePageProps = {
-  searchParams: {
+  searchParams: Promise<{
     sort?: keyof Coin;
     direction?: "asc" | "desc";
-  };
+  }>;
 };
 
 export default async function Home({ searchParams }: HomePageProps) {

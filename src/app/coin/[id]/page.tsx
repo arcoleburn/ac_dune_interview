@@ -16,8 +16,13 @@ const getCoinData = async (id: string): Promise<Coin | undefined> => {
   }
 };
 
-export default async function CoinPage({ params }: { params: { id: string } }) {
-  const { id } = await params;
+type CoinPageProps = {
+  params: Promise< {
+    id: string;
+  }>;
+};
+export default async function CoinPage({ params }: CoinPageProps) {
+  const { id } =  await params;
   const coin = await getCoinData(id);
   return (
     <div className="px-4 py-3  max-w-sm">
