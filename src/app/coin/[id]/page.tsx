@@ -24,7 +24,7 @@ export default async function CoinPage({ params }: { params: { id: string } }) {
       {coin ? (
         <PriceChart initialCoin={coin} coinId={coin.id} />
       ) : (
-        <p> Error fetching coin data, try again later </p>
+        <p> Error fetching coin data, try again later! </p>
       )}
     </div>
   );
